@@ -1,9 +1,6 @@
 var tLast;
 const interval = 1000;
 const letters = "0123456789ABCDEF";
-const canvas = document.getElementById("clr-canvas");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
 function getRandomColor() {
   let clr = "#";
@@ -15,13 +12,7 @@ function getRandomColor() {
 
 function updateGradient() {
   const grad = "linear-gradient("+getRandomColor()+","+getRandomColor()+")";
-  document.body.style.background = grad;
-}
-
-function handleResize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  updateGradient();
+  document.documentElement.style.background = grad;
 }
 
 function animate() {
@@ -36,7 +27,6 @@ function animate() {
 
 function init() {
   window.onload = function() {
-    window.addEventListener("resize", handleResize);
     tLast = performance.now();
     animate();
   }
