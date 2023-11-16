@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>html-clr</title>
+    <title>html-color</title>
     <style>
       body {
         margin: 0;
         overflow: hidden;
+        transition: background 1s ease;
       }
-      #clr-canvas {
+      /*#clr-canvas {
         position: absolute;
         top: 0;
         left: 0;
-      }
+      }*/
       #canvas-overlay {
         position: absolute;
         top: 0;
@@ -24,10 +25,11 @@
     </style>
   </head>
   <body>
-    <canvas id="clr-canvas">Fallback content here</canvas>
+    <canvas id="clr-canvas"></canvas>
     <div id="canvas-overlay">
       <p>These elements are overlaid ontop of the background</p>
     </div>
   </body>
-  <script type="text/javascript" src="simple.js"></script>
+  <!-- <script type="text/javascript" src="simple.js"></script> -->
+  <script type="text/javascript" src="gradient.js"></script>
 </html>
